@@ -2,7 +2,9 @@
 
 Enable detailed RGB-D data 3D reconstruction. Jointly estimate camera pose, geometry, albedo and envoriment lighting. 
 
-![method pipeline](https://github.com/Sangluisme/PSgradientSDF/blob/master/resources/pipline_crop.pdf)
+![method pipeline](pipline.png)
+
+
 
 
 The code is coming soon...
