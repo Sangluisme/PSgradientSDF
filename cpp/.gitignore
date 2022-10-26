@@ -4,5 +4,4 @@ build/
 build/CMakeFiles/*
 */bin/
 *.ply
-*.txt
 
