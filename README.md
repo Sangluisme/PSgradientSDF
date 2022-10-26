@@ -1,10 +1,11 @@
 ## <b>High-Quality RGB-D Reconstruction via Multi-View Uncalibrated Photometric Stereo and Gradient-SDF</b>
+
+WACV 2023 [paper](https://arxiv.org/abs/2210.12202)
 ---
 Enable detailed RGB-D data 3D reconstruction. Jointly estimate camera pose, geometry, albedo and environment lighting under natural light or point-light-source.
 
 ![method pipeline](pipeline.png)
 
----
 # clone repository
 ```
 git clone https://github.com/Sangluisme/PSgradientSDF.git
@@ -140,3 +141,14 @@ data
 
 - **compile error of `Sophus`**: we use an older version of sophus, just commit back to the version shows in the git repository.
 - **too slow/out of memory**: disable `upsampling` in `config.json` or increse the voxel size.
+
+# citation
+```
+@misc{sang2023high,
+  author = {Sang, Lu and Haefner, Bjoern and Zuo, Xingxing and Cremers, Daniel},
+  title = {High-Quality RGB-D Reconstruction via Multi-View Uncalibrated Photometric Stereo and Gradient-SDF},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {Creative Commons Attribution Non Commercial No Derivatives 4.0 International}
+}
+```
