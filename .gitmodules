@@ -1,0 +1,16 @@
+[submodule "cpp/third/CLI11"]
+	path = cpp/third/CLI11
+	url = https://github.com/CLIUtils/CLI11.git
+[submodule "cpp/third/Sophus"]
+	path = cpp/third/Sophus
+	url = https://github.com/strasdat/Sophus.git
+[submodule "cpp/third/eigen"]
+	path = cpp/third/eigen
+	url = https://gitlab.com/libeigen/eigen.git
+[submodule "cpp/third/parallel_hashmap"]
+	path = cpp/third/parallel_hashmap
+	url = https://github.com/greg7mdp/parallel-hashmap.git
+
+[submodule "cpp/third/json"]
+	path = cpp/third/json
+	url = https://github.com/nlohmann/json.git

@@ -1,0 +1,4 @@
+.vscode/
+.autosave
+cpp/build/*
+cpp/voxel_ps/bin/*
