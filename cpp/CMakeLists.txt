@@ -31,10 +31,6 @@ MESSAGE(STATUS "sophus dir in: ${SOPHUS_INCLUDE_DIR}")
 # FIND_PACKAGE(Sophus REQUIRED)
 INCLUDE_DIRECTORIES( ${SOPHUS_INCLUDE_DIR})
 
-# # Ceres Solver
-# FIND_PACKAGE(Ceres REQUIRED HINTS "${CERES_ROOT}")
-# INCLUDE_DIRECTORIES(${CERES_INCLUDE_DIRS})
-# MESSAGE(STATUS "Found Ceres headers in: ${CERES_INCLUDE_DIRS}")
 
 # CLI, command line parser
 INCLUDE_DIRECTORIES( third/CLI11/include/ )
@@ -64,7 +60,7 @@ SET( LIB_NAME sdf_tracker_lib )
 ADD_LIBRARY( ${LIB_NAME}
     include/sdf_tracker/VoxelGrid.cpp
     include/sdf_tracker/VolumetricGradSdf.cpp
-    include/sdf_tracker/VolumetricGradPixelSdf.cpp
+    # include/sdf_tracker/VolumetricGradPixelSdf.cpp
    include/sdf_tracker/RigidPointOptimizer.cpp
     )
 TARGET_LINK_LIBRARIES( ${LIB_NAME}
@@ -95,8 +91,5 @@ SET( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp" )
 
                  
 ########## DIRECTORIES ##########
-
-# ADD_SUBDIRECTORY(volumetric_tracking)
 ADD_SUBDIRECTORY(voxel_ps)
-# ADD_SUBDIRECTORY(generate_data)
-#ADD_SUBDIRECTORY(testing_gpu)
+

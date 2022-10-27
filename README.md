@@ -40,13 +40,13 @@ results (default results save path)
 
 ```
 # setup
-please create a `build` folder under the `cpp/` folder path then do 
+please create a `build` folder under the [cpp/](cpp/) folder path then do 
 ```
 cd cuild
 cmake ..
 make 
 ```
-it will build a binary file under the path `cpp/voxel_ps/bin/`.
+it will build a binary file under the path [cpp/voxel_ps/bin/](cpp/voxel_ps/bin/).
 
 # usage
 ```
@@ -55,7 +55,7 @@ cd ./cpp/voxel_ps/bin/
 ```
 
 # config file
-All the parameters you can control are listed in the example config files in the `config` folder. 
+All the parameters you can control are listed in the example config files in the [config](config/) folder. 
 Here is some explanation of the parameters.
 
 - **input**: data folder path
@@ -66,7 +66,7 @@ Here is some explanation of the parameters.
 - last: end frame number
 - voxel size: voxel size in `cm` (choose a larger one if the algorithm is too slow)
 - sharpness threshold: criteria of select the key frame
-- **model type**: `SH1`, `SH2`, `LED` (1st, 2nd spherical harmonics, point-light-source)
+- **model type**: `SH1`, `SH2`(not recommend), `LED` (1st, 2nd spherical harmonics, point-light-source)
 - reg albedo: regularizer for albedo (set to 0)
 - reg norm: Eikonal regularizer
 - reg laplacian: regularizer for distance laplacian (set to 0)
@@ -144,11 +144,17 @@ data
 
 # citation
 ```
-@misc{sang2023high,
-  author = {Sang, Lu and Haefner, Bjoern and Zuo, Xingxing and Cremers, Daniel},
-  title = {High-Quality RGB-D Reconstruction via Multi-View Uncalibrated Photometric Stereo and Gradient-SDF},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {Creative Commons Attribution Non Commercial No Derivatives 4.0 International}
+@inproceedings{sang2023high,
+ author = {L Sang and B Haefner and X Zuo and D Cremers},
+ title = {High-Quality RGB-D Reconstruction via Multi-View Uncalibrated Photometric Stereo and Gradient-SDF},
+ booktitle = {IEEE Winter Conference on Applications of Computer Vision (WACV)},
+ month = {January},
+ address = {Hawaii, USA},
+ year = {2023},
+ eprint = {2210.12202},
+ eprinttype = {arXiv},
+ eprintclass = {cs.CV},
+ copyright = {Creative Commons Attribution Non Commercial No Derivatives 4.0 International},
+ keywords = {3d-reconstruction,rgb-d,photometry},
 }
 ```
