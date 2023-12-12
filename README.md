@@ -141,6 +141,9 @@ data
 
 - **compile error of `Sophus`**: we use an older version of sophus, just commit back to the version shows in the git repository.
 - **too slow/out of memory**: disable `upsampling` in `config.json` or increase the voxel size.
+- **reconstruction size**: it is controlled by two factors, voxel size (per voxel, in meters) and voxel grid size, the default is 128x128x128. The actual reconstruction range will be voxel size times voxel grid size, e.g. 0.02*128 = 2.56 m (one edge). If you would like to use a bigger voxel grid size, change it here https://github.com/Sangluisme/PSgradientSDF/blob/164869288ffa2cca0162e79e262614d9309da57d/cpp/voxel_ps/src/main_ps.cpp#L123.
+- **voxel size**: changing voxel size will influence the reconstruction details since a smaller voxel size means each voxel only represents a smaller area. This will not affect the memory but a smaller voxel size means under the same voxel grid size, the reconstruction area will be small.
+- **voxel grid size**: currently is hard coded as 128x128x128. Please change here if you want https://github.com/Sangluisme/PSgradientSDF/blob/164869288ffa2cca0162e79e262614d9309da57d/cpp/voxel_ps/src/main_ps.cpp#L123. Larger voxel grid size will cause large memory consumptions, but also allows a larger reconstruction range.
 
 # citation
 ```
