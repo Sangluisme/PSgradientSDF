@@ -64,8 +64,8 @@ Here is some explanation of the parameters.
 - **datatype**: support `tum` (TUM_RGBD sequence), `synth`, `multiview` differences explained in next section
 - first: start frame number
 - last: end frame number
-- voxel size: voxel size in `cm` (choose a larger one if the algorithm is too slow)
-- sharpness threshold: criteria of select the key frame
+- voxel size: voxel size in `m` (choose a larger one if the algorithm is too slow)
+- sharpness threshold: criteria of selecting the keyframe
 - **model type**: `SH1`, `SH2`(not recommend), `LED` (1st, 2nd spherical harmonics, point-light-source)
 - reg albedo: regularizer for albedo (set to 0)
 - reg norm: Eikonal regularizer
@@ -79,14 +79,14 @@ Here is some explanation of the parameters.
 please note the **bold** parameters are required, others are optional.
 
 # data type
-**the main difference of each data type is the structure of the data folder**
-General requirement is:
-- contain depth and rgb images, together with `intrinsics.txt` in the same folder. 
-- If the pose is unkown, the images should like a video sequence which allow camera tracking, otherwise initial camera pose file should be provided. 
+**The main difference between each data type is the structure of the data folder**
+The general requirement is:
+- contain depth and RGB images, together with `intrinsics.txt` in the same folder. 
+- If the pose is unknown, the images should be like a video sequence that allow camera tracking, otherwise initial camera pose file should be provided. 
 
 `tum` -- TUM_RGBD (please refer to https://vision.in.tum.de/data/datasets/rgbd-dataset/download for detail)
 
-should have the structure 
+should have a structure 
 ```
 data
 |---depth (folder)
@@ -135,12 +135,12 @@ data
 |     |---...
 |---intrinsics.txt
 ```
-**To use your own data, just convert your data to either one of the structure and specify the corresponding data type in the `config.json` file**.
+**To use your own data, just convert your data to either one of the structures and specify the corresponding data type in the `config.json` file**.
 
 # trouble shooting
 
 - **compile error of `Sophus`**: we use an older version of sophus, just commit back to the version shows in the git repository.
-- **too slow/out of memory**: disable `upsampling` in `config.json` or increse the voxel size.
+- **too slow/out of memory**: disable `upsampling` in `config.json` or increase the voxel size.
 
 # citation
 ```
